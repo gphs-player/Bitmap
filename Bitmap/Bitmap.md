@@ -53,7 +53,7 @@ Java层BitmapFactory.decodeResource方法最终都是调用native层的nativeDec
 
 
 ```
-		if (env->GetBooleanField(options, gOptions_scaledFieldID)) {
+if (env->GetBooleanField(options, gOptions_scaledFieldID)) {
             const int density = env->GetIntField(options, gOptions_densityFieldID);
             const int targetDensity = env->GetIntField(options, gOptions_targetDensityFieldID);
             const int screenDensity = env->GetIntField(options, gOptions_screenDensityFieldID);
