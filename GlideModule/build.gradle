@@ -34,6 +34,7 @@ dependencies {
 
 
     implementation 'com.github.bumptech.glide:glide:4.4.0'
+
     annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
     //Glide的图片变换
     implementation 'jp.wasabeef:glide-transformations:3.3.0'

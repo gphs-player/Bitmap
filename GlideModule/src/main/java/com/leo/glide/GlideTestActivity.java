@@ -1,6 +1,7 @@
 package com.leo.glide;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -44,18 +45,23 @@ public class GlideTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_glide_test);
         mImage = findViewById(R.id.imageHolder);
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        //为每个应用分配内存，M为单位
+        int memoryClass = manager.getMemoryClass();
+        System.out.println("memoryClass : "+memoryClass);
     }
 
     public void load(View view) {
         String url = "http://guolin.tech/book.png";
+        String urlGif = "http://p1.pstatp.com/large/166200019850062839d3";
 //        loadImage(url);
 //        loadWithSize(url);
-//        loadWithHolder(url);
+        loadWithHolder(urlGif);
 //        loadWithCache(url);
 //        loadWithCallback(mImage, url);
 //        downloadImage();
 //        loadTransform();
-        loadTransformLib();
+//        loadTransformLib();
     }
 
     /**
@@ -64,6 +70,7 @@ public class GlideTestActivity extends AppCompatActivity {
      * @param url
      */
     private void loadImage(String url) {
+        //可以加载网络本地和Drawable资源
         Glide.with(this).load(url).into(mImage);
     }
 
@@ -73,8 +80,11 @@ public class GlideTestActivity extends AppCompatActivity {
      * @param url
      */
     private void loadWithHolder(String url) {
+
         RequestOptions options = new RequestOptions()
                 .placeholder(R.mipmap.ic_launcher_round)
+                .error(R.mipmap.ic_launcher_round)
+                .dontAnimate()
                 .diskCacheStrategy(DiskCacheStrategy.NONE);
         Glide.with(this)
                 .load(url)
