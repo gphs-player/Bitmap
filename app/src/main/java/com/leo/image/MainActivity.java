@@ -7,6 +7,8 @@ import android.view.View;
 
 import com.leo.bitmap.BitmapActivity;
 import com.leo.glide.GlideTestActivity;
+import com.leo.process.CompressLargeActivity;
+import com.leo.process.CutBitmapActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToBitmap(View view) {
         Intent intent = new Intent(this, BitmapActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToCompress(View view) {
+        Intent intent = new Intent(this, CompressLargeActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToCut(View view) {
+        Intent intent = new Intent(this, CutBitmapActivity.class);
         startActivity(intent);
     }
 }

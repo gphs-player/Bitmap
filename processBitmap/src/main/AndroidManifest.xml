@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.leo.process">
+
+    <application>
+        <activity android:name=".CompressLargeActivity"></activity>
+        <activity android:name=".CutBitmapActivity" />
+    </application>
+
+</manifest>

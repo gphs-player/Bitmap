@@ -16,5 +16,15 @@
         android:onClick="goToBitmap"
         android:text="Bitmap"
         />
+    <TextView
+        style="@style/textStyle"
+        android:onClick="goToCut"
+        android:text="压缩Bitmap"
+        />
+    <TextView
+        style="@style/textStyle"
+        android:onClick="goToCompress"
+        android:text="压缩加载大图"
+        />
 
 </LinearLayout>

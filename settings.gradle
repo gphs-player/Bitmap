@@ -1,1 +1,1 @@
-include ':app', ':GlideModule', ':Bitmap'
+include ':app', ':GlideModule', ':Bitmap', ':processBitmap'

@@ -142,7 +142,7 @@ public class GlideTestActivity extends AppCompatActivity {
         SimpleTarget<Drawable> target = new SimpleTarget<Drawable>() {
             @Override
             public void onResourceReady(Drawable resource, Transition transition) {
-                //I/System.out: resource： android.graphics.drawable-xxhdpi.BitmapDrawable@c8d4e6c
+                //I/System.out: resource： android.graphics.drawable-xxhdpi-xxhdpi.BitmapDrawable@c8d4e6c
                 System.out.println("resource： " + resource.toString());
                 imageView.setImageDrawable(resource);
             }
@@ -229,6 +229,8 @@ public class GlideTestActivity extends AppCompatActivity {
                 .apply(options)
                 .into(mImage);
     }
+
+
     private void custom(String url) {
         //提供了一套和Glide3一样的用法，前提是@GlideModule注解
         GlideApp.with(this)
