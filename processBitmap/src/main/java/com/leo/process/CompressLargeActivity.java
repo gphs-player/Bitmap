@@ -58,7 +58,9 @@ public class CompressLargeActivity extends AppCompatActivity {
         //获取原图的宽高
         int outWidth = options.outWidth;
         int outHeight = options.outHeight;
+        Bitmap.Config preferredConfig = options.inPreferredConfig;
         String outMimeType = options.outMimeType;
+        System.out.println("preferredConfig : " + preferredConfig.toString());//ARGB_8888
         System.out.println("outWidth : " + outWidth);//6480
         System.out.println("outHeight : " + outHeight);//3888
         System.out.println("outMimeType : " + outMimeType);//image/jpeg
