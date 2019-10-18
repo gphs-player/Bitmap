@@ -1,8 +1,4 @@
-# Bitmap
-
----
-
-## drawable加载细节
+## Drawable加载细节
 
 
 
@@ -30,7 +26,7 @@
 
 |dpi范围 | 密度 |
 |---|---|
-| 0dpi ~ 120dpi | ldpi | 
+| 0dpi ~ 120dpi | ldpi |
 | 120dpi ~ 160dpi |	mdpi |
 | 160dpi ~ 240dpi |	hdpi |
 | 240dpi ~ 320dpi |	xhdpi |
@@ -68,8 +64,8 @@ if (env->GetBooleanField(options, gOptions_scaledFieldID)) {
 
 `inTargetDensity`代表的是你手机的密度比，`inDensity`代表图片所在目录下的密度比。如果二者匹配，图片将不会缩放，否则根据实际情况进行缩放。
 
+####  结果
 
-### 结果
 看完上面的步骤，关于BitMap优化可以得到3点...
 
 

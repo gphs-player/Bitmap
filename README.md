@@ -1,5 +1,4 @@
+### [Drawable资源的合理位置](./Bitmap/Bitmap.md)
 
-### [Bitmap资源放置](./Bitmap/Bitmap.md)
-
-### [Bitmap处理](./processBitmap/README.md)
+### [Bitmap大图压缩加载](./processBitmap/Compress.md)
 
