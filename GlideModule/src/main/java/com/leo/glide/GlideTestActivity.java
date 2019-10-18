@@ -71,7 +71,9 @@ public class GlideTestActivity extends AppCompatActivity {
      */
     private void loadImage(String url) {
         //可以加载网络本地和Drawable资源
-        Glide.with(this).load(url).into(mImage);
+        Glide.with(this)
+                .load(url)
+                .into(mImage);
     }
 
     /**
@@ -80,7 +82,6 @@ public class GlideTestActivity extends AppCompatActivity {
      * @param url
      */
     private void loadWithHolder(String url) {
-
         RequestOptions options = new RequestOptions()
                 .placeholder(R.mipmap.ic_launcher_round)
                 .error(R.mipmap.ic_launcher_round)
@@ -102,6 +103,7 @@ public class GlideTestActivity extends AppCompatActivity {
                 .placeholder(R.mipmap.ic_launcher_round)
                 //.override(200,200)//Glide只会加载这么大的图片，不管ImageView大小。清晰度影响
                 .override(Target.SIZE_ORIGINAL);//加载原图
+
         Glide.with(this)
                 .load(url)
                 .apply(options)
